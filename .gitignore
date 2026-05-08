@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+
+# Opcional: ignorar a pasta de exemplos em React,
+# já que o projeto final é em HTML/JS Vanilla.
+exemplo/

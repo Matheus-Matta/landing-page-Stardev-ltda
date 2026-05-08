@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bg="aurora" data-typeset="mono-accent">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stardev — Engenharia com gosto.</title>
+  <meta name="description" content="Stardev é uma software house de elite e incubadora de SaaS no Rio de Janeiro. Criamos aplicações Full-Stack, Mobile e E-commerce Headless focadas em performance e arquitetura sólida." />
+  <meta name="keywords" content="software house, desenvolvimento full-stack, aplicativos mobile, react native, next.js, e-commerce headless, cloud computing, devops, rio de janeiro, desenvolvimento de software" />
+  <meta name="author" content="Stardev" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://star.dev.br/" />
+  <meta property="og:title" content="Stardev — Engenharia com gosto." />
+  <meta property="og:description" content="Software house de elite focada em escalar produtos digitais com arquitetura sólida, performance e design sofisticado." />
+  <meta property="og:image" content="https://star.dev.br/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://star.dev.br/" />
+  <meta property="twitter:title" content="Stardev — Engenharia com gosto." />
+  <meta property="twitter:description" content="Software house de elite focada em escalar produtos digitais com arquitetura sólida, performance e design sofisticado." />
+  <meta property="twitter:image" content="https://star.dev.br/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <header class="nav">
+    <div class="container nav-row">
+      <a href="#" class="brand" data-comment-anchor="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2 L13.6 9.2 L20.8 7.2 L15.4 12.4 L20.8 17.6 L13.6 15.6 L12 22.8 L10.4 15.6 L3.2 17.6 L8.6 12.4 L3.2 7.2 L10.4 9.2 Z" fill="currentColor" opacity="0.9"/>
+            <circle cx="12" cy="12" r="2.2" fill="#0a0a0c"/>
+          </svg>
+        </span>
+        <span class="brand-name">Stardev<em>.</em></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Serviços</a>
+        <a href="#saas">Portfólio</a>
+        <a href="#process">Processo</a>
+        <a href="#cases">Cases</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contato" class="btn btn-ghost">Falar com time</a>
+        <a href="#saas" class="btn btn-primary">Ver portfólio 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <button class="menu-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Menu">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button class="close" onclick="document.getElementById('mobile-menu').classList.remove('open')" aria-label="Fechar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 6 L18 18 M18 6 L6 18" />
+      </svg>
+    </button>
+    <nav>
+      <a href="#services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Serviços <span style="opacity:0.4">→</span></a>
+      <a href="#saas" onclick="document.getElementById('mobile-menu').classList.remove('open')">Portfólio</a>
+      <a href="#process" onclick="document.getElementById('mobile-menu').classList.remove('open')">Processo</a>
+      <a href="#cases" onclick="document.getElementById('mobile-menu').classList.remove('open')">Cases</a>
+      <a href="#contato" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contato</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" data-screen-label="01 Hero">
+      <div class="hero-aurora"></div>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Software house · Engenharia sob medida · Est. 2019</span>
+        </div>
+        <h1 class="display reveal">
+          <span class="char-fade">Transformamos</span> linhas<br/>
+          de código em <span class="italic">soluções</span><br/>
+          de elite.
+        </h1>
+        <div class="hero-meta reveal">
+          <p class="hero-sub">
+            Construímos apps mobile, e-commerces, plataformas SaaS e sites institucionais
+            sob medida — da arquitetura inicial ao escalonamento em produção. Engenharia
+            séria, sem ruído.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Nossos serviços 
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#saas" class="btn btn-ghost">Ver portfólio</a>
+          </div>
+        </div>
+        <div class="reveal" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px">
+          <div class="code-chip">
+            <span class="dot"></span>
+            <span>$ <span id="hero-code"></span><span class="caret"></span></span>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num num-tabular" data-num="07">07</div>
+              <div class="lbl">Anos · Operação</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num num-tabular" data-num="120+">120<span style="color:var(--ink-dim)">+</span></div>
+              <div class="lbl">Produtos · Entregues</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num num-tabular" data-num="99.98%">99.98<span style="font-size:0.5em; color:var(--ink-dim)">%</span></div>
+              <div class="lbl">Uptime · 12m</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services" data-screen-label="02 Services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 02 / Serviços</span>
+            <h2 class="display" style="margin-top:24px">O que fazemos<br/><span class="italic">de ponta a ponta.</span></h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Capacidades</span>
+            <p>Times pequenos, multidisciplinares e remunerados por resultado. Cada engajamento começa com uma pergunta antes de qualquer linha de código.</p>
+          </div>
+        </div>
+        <div class="reveal" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom: 8px">
+          <div class="services-tabs" role="tablist" id="services-tabs-container"></div>
+          <span class="section-num" id="services-count"></span>
+        </div>
+        <div class="services-grid reveal-stagger" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- Bento -->
+    <section id="saas" class="bento" data-screen-label="03 Portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 03 / O que entregamos</span>
+            <h2 class="display" style="margin-top:24px">
+              <span class="char-fade">Produtos</span> que <span class="italic">construímos</span><br/>de ponta a ponta.
+            </h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Software · sob medida</span>
+            <p>Cada projeto começa em conversa e termina em produção. Veja os formatos com os quais mais trabalhamos — sempre adaptados ao seu domínio.</p>
+          </div>
+        </div>
+
+        <div class="bento-grid reveal-stagger">
+          <div class="bento-card b-span-3 b-row-2 has-preview">
+            <div class="bento-head">
+              <span class="badge live">Apps mobile</span>
+              <span class="section-num">iOS · Android</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">
+              Aplicativos <span class="italic">nativos</span> e híbridos.
+            </h3>
+            <p class="product-desc">
+              Apps performáticos com UX consistente entre plataformas. Auth, push, billing,
+              offline-first e CI/CD para as duas lojas. Lançamento em 8 a 14 semanas.
+            </p>
+            <div class="preview-wrap">
+              <div class="mb-frame">
+                <div class="mb-notch"></div>
+                <div class="mb-screen">
+                  <div class="mb-statusbar"><span>9:41</span><span>●●●●</span></div>
+                  <div class="mb-greeting">Olá, <em>Marina</em></div>
+                  <div class="mb-card mb-card-hero">
+                    <div class="mb-pill"></div>
+                    <div class="mb-bar w70"></div>
+                    <div class="mb-bar w40"></div>
+                  </div>
+                  <div class="mb-card mb-card-row"></div>
+                  <div class="mb-card mb-card-row short"></div>
+                  <div class="mb-tabbar" id="mb-tabbar">
+                    <span class="on">Home</span><span>Pedidos</span><span>Conta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-card b-span-3 b-row-2 has-preview">
+            <div class="bento-head">
+              <span class="badge new">E-commerce</span>
+              <span class="section-num">Headless · D2C</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">
+              Lojas online <span class="italic">construídas</span> do zero.
+            </h3>
+            <p class="product-desc">
+              Storefront headless, checkout otimizado, integrações com gateways e ERPs.
+              Migração de Shopify/VTEX ou construção sob medida com Medusa + Next.js.
+            </p>
+            <div class="preview-wrap">
+              <div class="shop-frame">
+                <div class="shop-toolbar">
+                  <span>shop.cliente.com</span>
+                  <span class="cart-pill">🛒 <b id="shop-count">2</b></span>
+                </div>
+                <div class="shop-grid">
+                  <div class="shop-prod">
+                    <div class="shop-prod-img"></div>
+                    <div class="shop-prod-name">Camiseta</div>
+                    <div class="shop-prod-price">R$ 129,00</div>
+                  </div>
+                  <div class="shop-prod">
+                    <div class="shop-prod-img"></div>
+                    <div class="shop-prod-name">Tênis</div>
+                    <div class="shop-prod-price">R$ 459,00</div>
+                  </div>
+                  <div class="shop-prod">
+                    <div class="shop-prod-img"></div>
+                    <div class="shop-prod-name">Mochila</div>
+                    <div class="shop-prod-price">R$ 299,00</div>
+                  </div>
+                  <div class="shop-prod">
+                    <div class="shop-prod-img"></div>
+                    <div class="shop-prod-name">Boné</div>
+                    <div class="shop-prod-price">R$ 89,00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-card b-span-3 b-row-2 has-preview">
+            <div class="bento-head">
+              <span class="badge beta">Plataformas SaaS</span>
+              <span class="section-num">Multi-tenant</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">
+              SaaS B2B prontos <span class="italic">para escala.</span>
+            </h3>
+            <p class="product-desc">
+              Auth multi-tenant, billing, dashboards, analytics e webhooks. Do MVP à série A
+              sem reescrever a fundação.
+            </p>
+            <div class="preview-wrap">
+              <div class="saas-frame">
+                <div class="saas-side">
+                  <div class="saas-logo"></div>
+                  <div class="saas-nav on"></div>
+                  <div class="saas-nav"></div>
+                  <div class="saas-nav"></div>
+                  <div class="saas-nav"></div>
+                </div>
+                <div class="saas-main">
+                  <div class="saas-stat-row">
+                    <div class="saas-stat"><div class="sv">12.4k</div><div class="sl">MAU</div></div>
+                    <div class="saas-stat"><div class="sv">98%</div><div class="sl">Retenção</div></div>
+                    <div class="saas-stat"><div class="sv">R$ 84k</div><div class="sl">MRR</div></div>
+                  </div>
+                  <div class="saas-chart">
+                    <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                      <path d="M0 50 L20 42 L40 46 L60 30 L80 34 L100 22 L120 26 L140 12 L160 18 L180 8 L200 14"
+                            stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M0 50 L20 42 L40 46 L60 30 L80 34 L100 22 L120 26 L140 12 L160 18 L180 8 L200 14 L200 60 L0 60 Z"
+                            fill="url(#chartFill)" opacity="0.3"/>
+                      <defs>
+                        <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="0%" stop-color="currentColor" stop-opacity="0.5"/>
+                          <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-card b-span-3 b-row-2 has-preview">
+            <div class="bento-head">
+              <span class="badge">Sites & landings</span>
+              <span class="section-num">CMS · Edge</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">
+              Sites institucionais <span class="italic">que carregam</span> em 100ms.
+            </h3>
+            <p class="product-desc">
+              Editoriais, marketing sites e portais corporativos. Stack moderna,
+              CMS amigável ao time de conteúdo, Core Web Vitals 100/100.
+            </p>
+            <div class="preview-wrap">
+              <div class="site-frame">
+                <div class="site-toolbar">
+                  <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                  <span class="site-url">cliente.com.br</span>
+                </div>
+                <div class="site-hero">
+                  <div class="site-h1">
+                    <em>Editorial.</em><br/>
+                    <span>Performance.</span>
+                  </div>
+                  <div class="site-cta"></div>
+                </div>
+                <div class="site-row">
+                  <div class="site-col"></div>
+                  <div class="site-col"></div>
+                  <div class="site-col"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-card b-span-2">
+            <div class="bento-head">
+              <span class="badge">+ Mais</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">API & integrações</h3>
+            <p class="product-desc">REST e GraphQL, microserviços e ETLs sob demanda.</p>
+            <div class="metric"><span class="v num-tabular" data-num="120+">120+</span><span class="u">integrações entregues</span></div>
+          </div>
+
+          <div class="bento-card b-span-2">
+            <div class="bento-head">
+              <span class="badge">+ Mais</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">Cloud & DevOps</h3>
+            <p class="product-desc">Infra como código, observabilidade e CI/CD em AWS, GCP e Azure.</p>
+            <div class="metric"><span class="v num-tabular" data-num="99.98%">99.98%</span><span class="u">uptime médio</span></div>
+          </div>
+
+          <div class="bento-card b-span-2">
+            <div class="bento-head">
+              <span class="badge">+ Mais</span>
+            </div>
+            <h3 class="product-name" style="margin-top:14px">Consultoria & DD</h3>
+            <p class="product-desc">Discovery, auditoria de código e tech due diligence.</p>
+            <div class="metric"><span class="v num-tabular" data-num="40+">40+</span><span class="u">empresas atendidas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TechStack -->
+    <section class="stack-v2" data-screen-label="04 Stack">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 04 / Ferramentas</span>
+            <h2 class="display" style="margin-top:24px">
+              Stack <span class="italic">honesta.</span>
+            </h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Sem hype · Só o que entrega</span>
+            <p>Escolhemos ferramentas pelo que resolvem, não pelo que tuitam. Aqui está tudo que usamos em produção hoje.</p>
+          </div>
+        </div>
+
+        <div class="stack-tabs reveal" id="stack-tabs-container"></div>
+        <div class="stack-display reveal-stagger" id="stack-display"></div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="process" data-screen-label="05 Process">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 05 / Processo</span>
+            <h2 class="display" style="margin-top:24px">Como<br/><span class="italic">trabalhamos.</span></h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Cinco fases · Zero teatro</span>
+            <p>Um processo afiado em sete anos e mais de quarenta produtos. Cada fase tem entregáveis claros e ponto de saída — você nunca está preso.</p>
+          </div>
+        </div>
+        <div class="process-list reveal-stagger" id="process-list"></div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="cases" data-screen-label="06 Cases">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 06 / Trabalho</span>
+            <h2 class="display" style="margin-top:24px">Trabalho selecionado.</h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Cases · 2023 — 2025</span>
+            <p>Quatro entre dezenas. Compartilhamos casos com profundidade técnica sob NDA — pergunte sobre o seu setor.</p>
+          </div>
+        </div>
+        <div class="cases-grid reveal-stagger" id="cases-grid"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="tests" data-screen-label="07 Testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 07 / Vozes</span>
+            <h2 class="display" style="margin-top:24px">O que dizem<br/>de nós.</h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Clientes · Times técnicos</span>
+            <p>Pedimos depoimentos só de quem trabalhou diretamente com nosso código. Engenheiros falando de engenharia.</p>
+          </div>
+        </div>
+        <div class="tests-grid reveal-stagger" id="tests-grid"></div>
+      </div>
+    </section>
+
+    <!-- ContactSection -->
+    <section id="contato" class="contact" data-screen-label="08 Contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-num">— 08 / Vamos conversar</span>
+            <h2 class="display" style="margin-top:24px">
+              <span class="char-fade">Pronto</span> para<br/>
+              <span class="italic">construir</span> algo?
+            </h2>
+          </div>
+          <div class="sh-right">
+            <span class="eyebrow">Resposta em 24h · sem bot</span>
+            <p>Conte sobre o problema, o prazo e quem está envolvido. Devolvemos um caminho técnico — não um orçamento de prateleira.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form">
+            <div class="cf-row">
+              <label class="cf-field">
+                <span>Nome</span>
+                <input name="nome" required type="text" placeholder="Como te chamamos?" />
+              </label>
+              <label class="cf-field">
+                <span>Email</span>
+                <input name="email" required type="email" placeholder="voce@empresa.com" />
+              </label>
+            </div>
+            <div class="cf-row">
+              <label class="cf-field">
+                <span>Empresa</span>
+                <input name="empresa" type="text" placeholder="Nome da empresa" />
+              </label>
+              <label class="cf-field">
+                <span>Tipo de projeto</span>
+                <select name="tipo_projeto">
+                  <option value="App mobile">App mobile</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="Plataforma SaaS">Plataforma SaaS</option>
+                  <option value="Site institucional">Site institucional</option>
+                  <option value="Consultoria">Consultoria / DD</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </label>
+            </div>  
+            <label class="cf-field">
+              <span>Mensagem</span>
+              <textarea name="mensagem" required rows="4" placeholder="Problema, contexto, prazo desejado…"></textarea>
+            </label>
+            <div class="cf-actions">
+              <button type="submit" class="btn btn-primary" id="contact-btn">
+                Enviar inscrição <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </button>
+              <span class="cf-hint">* Confidencial. Não vendemos nem compartilhamos seus dados.</span>
+            </div>
+          </form>
+
+          <aside class="contact-aside reveal">
+            <div class="contact-block">
+              <span class="eyebrow">Email direto</span>
+              <a href="mailto:contato@star.dev.br" class="contact-big">
+                contato<span class="italic">@</span>star.dev.br
+              </a>
+            </div>
+            <div class="contact-block">
+              <span class="eyebrow">Telefone · WhatsApp</span>
+              <a href="tel:+5521981345727" class="contact-big">
+                +55 <span class="italic">21</span> 98134-5727
+              </a>
+            </div>
+            <div class="contact-block">
+              <span class="eyebrow">Endereço</span>
+              <p class="contact-addr">
+                Rua Dezenove de Novembro, 617 · Casa 1<br/>
+                Paraíso · São Gonçalo / RJ<br/>
+                Brasil · 24431-580
+              </p>
+            </div>
+            <div class="contact-block">
+              <span class="eyebrow">Horário</span>
+              <p class="contact-addr">Seg–Sáb · 09h às 19h (GMT−3)</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-screen-label="09 Footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2 L13.6 9.2 L20.8 7.2 L15.4 12.4 L20.8 17.6 L13.6 15.6 L12 22.8 L10.4 15.6 L3.2 17.6 L8.6 12.4 L3.2 7.2 L10.4 9.2 Z" fill="currentColor" opacity="0.9"/>
+                <circle cx="12" cy="12" r="2.2" fill="#0a0a0c"/>
+              </svg>
+            </span>
+            <span class="brand-name">Stardev<em>.</em></span>
+          </a>
+          <h3>Engenharia<br/><span class="italic">com gosto.</span></h3>
+          <p>Software house e incubadora de SaaS, baseada em Rio de Janeiro. Atendendo times técnicos no Brasil, EUA e Portugal desde 2019.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#services">Full-Stack <span class="arrow">→</span></a></li>
+            <li><a href="#services">Mobile <span class="arrow">→</span></a></li>
+            <li><a href="#services">E-commerce <span class="arrow">→</span></a></li>
+            <li><a href="#services">Cloud / DevOps <span class="arrow">→</span></a></li>
+            <li><a href="#services">AI / Data <span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Portfólio</h4>
+          <ul>
+            <li><a href="#saas">Apps mobile <span class="arrow">→</span></a></li>
+            <li><a href="#saas">E-commerce <span class="arrow">→</span></a></li>
+            <li><a href="#saas">Plataformas SaaS <span class="arrow">→</span></a></li>
+            <li><a href="#saas">Sites institucionais <span class="arrow">→</span></a></li>
+            <li><a href="#saas">APIs & integrações <span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-mark" id="footer-mark">Stardev.</div>
+      <div class="footer-bottom">
+        <span>© 2026 Stardev Ltda · CNPJ 20.078.285/0001-90</span>
+        <span>Rio de Janeiro · BR</span>
+        <span>Todas as horas são GMT−3</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Lógica Vanilla JS convertida do React -->
+  <script>
+    // Reveal Observer
+    const els = document.querySelectorAll(".reveal, .reveal-stagger");
+    els.forEach(el => el.classList.add("in"));
+    const io = new MutationObserver(() => {
+      document.querySelectorAll(".reveal:not(.in), .reveal-stagger:not(.in)").forEach(el => el.classList.add("in"));
+    });
+    io.observe(document.body, { childList: true, subtree: true });
+
+    // Hero Typewriter
+    const targets = [
+      "stardev build --target=production",
+      "stardev deploy --region=br-south-1",
+      "stardev incubate --idea=\"saas\"",
+      "stardev scale --replicas=auto",
+    ];
+    let idx = 0, charIdx = 0, dir = 1;
+    const codeEl = document.getElementById("hero-code");
+    function tick() {
+      if(!codeEl) return;
+      const target = targets[idx];
+      let c = charIdx + dir;
+      if (c > target.length) {
+        dir = -1; c = target.length;
+        setTimeout(tick, 1400); charIdx = c; return;
+      }
+      if (c < 0) {
+        dir = 1; c = 0;
+        idx = (idx + 1) % targets.length;
+      }
+      charIdx = c;
+      codeEl.innerText = target.slice(0, c);
+      setTimeout(tick, dir > 0 ? 55 : 28);
+    }
+    setTimeout(tick, 100);
+
+    // SVG Arrow
+    const arrowSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+
+    // Services Data
+    const SERVICES = {
+      todos: [
+        { num: "01", title: "Desenvolvimento Full-Stack", desc: "Aplicações sob medida — front-end, back-end e dados — com arquitetura que suporta crescimento sem reescrita.", tags: ["React", "Next.js", "Node", "Postgres"] },
+        { num: "02", title: "Consultoria Tech", desc: "Discovery, auditoria de código e definição de roadmap. Trazemos clareza técnica para decisões de produto e investimento.", tags: ["Discovery", "Audit", "Roadmap"] },
+        { num: "03", title: "Cloud & DevOps", desc: "Infraestrutura como código, observabilidade e CI/CD. Ambientes resilientes prontos para o pior dia da sua semana.", tags: ["AWS", "Terraform", "K8s"] },
+        { num: "04", title: "Mobile Nativo & Híbrido", desc: "iOS, Android e React Native. Apps performáticos com UX coerente entre plataformas.", tags: ["Swift", "Kotlin", "RN"] },
+        { num: "05", title: "E-commerce Headless", desc: "Lojas construídas do zero ou migradas para stack headless — performance Core Web Vitals e flexibilidade total.", tags: ["Shopify", "Medusa", "Stripe"] },
+        { num: "06", title: "AI & Data Engineering", desc: "Pipelines de dados, RAG e integração com modelos. Da prova de conceito ao produto em produção.", tags: ["LLM", "RAG", "Vector DB"] },
+      ],
+      build: [
+        { num: "01", title: "Desenvolvimento Full-Stack", desc: "Aplicações sob medida — front-end, back-end e dados — com arquitetura que suporta crescimento sem reescrita.", tags: ["React", "Next.js", "Node", "Postgres"] },
+        { num: "02", title: "Mobile Nativo & Híbrido", desc: "iOS, Android e React Native. Apps performáticos com UX coerente entre plataformas.", tags: ["Swift", "Kotlin", "RN"] },
+        { num: "03", title: "E-commerce Headless", desc: "Lojas construídas do zero ou migradas para stack headless — performance Core Web Vitals e flexibilidade total.", tags: ["Shopify", "Medusa", "Stripe"] },
+      ],
+      scale: [
+        { num: "01", title: "Cloud & DevOps", desc: "Infraestrutura como código, observabilidade e CI/CD. Ambientes resilientes prontos para o pior dia da sua semana.", tags: ["AWS", "Terraform", "K8s"] },
+        { num: "02", title: "AI & Data Engineering", desc: "Pipelines de dados, RAG e integração com modelos. Da prova de conceito ao produto em produção.", tags: ["LLM", "RAG", "Vector DB"] },
+        { num: "03", title: "Performance & SRE", desc: "Diagnóstico de gargalos, otimização e cultura de confiabilidade. Métricas que importam ao negócio.", tags: ["SRE", "Observability"] },
+      ],
+      advise: [
+        { num: "01", title: "Consultoria Tech", desc: "Discovery, auditoria de código e definição de roadmap. Trazemos clareza técnica para decisões de produto e investimento.", tags: ["Discovery", "Audit", "Roadmap"] },
+        { num: "02", title: "Tech Due Diligence", desc: "Análise técnica para investidores e M&A — risco, qualidade de código e dívida estrutural.", tags: ["DD", "M&A"] },
+      ]
+    };
+
+    function renderServices(tab) {
+      const grid = document.getElementById('services-grid');
+      const list = SERVICES[tab] || SERVICES.todos;
+      document.getElementById('services-count').innerText = String(list.length).padStart(2, '0') + ' capacidades';
+      grid.innerHTML = list.map(s => `
+        <div class="service-card">
+          <span class="num">${s.num}</span>
+          <span class="arrow">${arrowSvg}</span>
+          <h3 class="title">${s.title}</h3>
+          <p>${s.desc}</p>
+          <div class="service-tags">
+            ${s.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('#services-tabs-container button').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById('srv-' + tab);
+      if(activeBtn) activeBtn.classList.add('active');
+    }
+
+    const srvTabs = [{k:'todos',l:'Todos'},{k:'build',l:'Construir'},{k:'scale',l:'Escalar'},{k:'advise',l:'Aconselhar'}];
+    document.getElementById('services-tabs-container').innerHTML = srvTabs.map(t => 
+      `<button id="srv-${t.k}" onclick="renderServices('${t.k}')">${t.l}</button>`
+    ).join('');
+    renderServices('todos');
+
+    // Bento Hover Effect
+    document.querySelectorAll('.bento-card').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        el.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+
+    // Mobile Preview Tab Loop
+    let mbTab = 0;
+    setInterval(() => {
+      mbTab = (mbTab + 1) % 3;
+      const spans = document.querySelectorAll('#mb-tabbar span');
+      if(spans.length) {
+        spans.forEach(s => s.classList.remove('on'));
+        spans[mbTab].classList.add('on');
+      }
+    }, 1800);
+
+    // Shop Preview Count Loop
+    let shopCount = 2;
+    setInterval(() => {
+      shopCount = (shopCount % 4) + 1;
+      const el = document.getElementById('shop-count');
+      if(el) el.innerText = shopCount;
+    }, 1800);
+
+    // TechStack Data
+    const STACK_CATS = [
+      { label: "Todos", items: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind", "Bootstrap", "Node.js", "Python", "Django", "Ruby on Rails", "FastAPI", "NestJS", "PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "AWS", "GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Microservices", "Event-driven", "DDD", "Hexagonal", "CQRS", "Serverless"] },
+      { label: "Frontend", items: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind", "Bootstrap"] },
+      { label: "Backend", items: ["Node.js", "Python", "Django", "Ruby on Rails", "FastAPI", "NestJS"] },
+      { label: "Bancos", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB"] },
+      { label: "Cloud / DevOps", items: ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions"] },
+      { label: "Arquitetura", items: ["Microservices", "Event-driven", "DDD", "Hexagonal", "CQRS", "Serverless"] }
+    ];
+
+    function renderStack(index) {
+      const display = document.getElementById('stack-display');
+      const allItems = STACK_CATS[0].items;
+      const cat = STACK_CATS[index];
+      display.innerHTML = cat.items.map((it) => {
+        const globalIdx = allItems.indexOf(it);
+        const displayIdx = globalIdx >= 0 ? globalIdx : 0;
+        return `
+        <span class="stack-chip">
+          <span class="stack-chip-num">${String(displayIdx + 1).padStart(2, "0")}</span>
+          <span class="stack-chip-name">${it}</span>
+        </span>
+      `}).join('');
+
+      document.querySelectorAll('#stack-tabs-container button').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById('stk-' + index);
+      if(activeBtn) activeBtn.classList.add('active');
+    }
+
+    document.getElementById('stack-tabs-container').innerHTML = STACK_CATS.map((c, i) => 
+      `<button id="stk-${i}" onclick="renderStack(${i})">
+        <span class="stack-tab-num">${String(i + 1).padStart(2, "0")}</span>
+        <span>${c.label}</span>
+        <span class="stack-tab-count">${c.items.length}</span>
+      </button>`
+    ).join('');
+    renderStack(0);
+
+    // Process Data
+    const PROCESS = [
+      { 
+        n: "01", t: "Discovery", 
+        d: "Mapeamos restrições, oportunidades e métricas de sucesso. Saímos com um documento técnico — não com slides.",
+        details: `
+          <p><strong>O foco aqui é reduzir a incerteza.</strong> Em vez de focar em apresentações bonitas, o objetivo é entender a viabilidade técnica e o valor de negócio.</p>
+          <ul class="process-details-list">
+            <li><strong>Documentação Técnica:</strong> O entregável é um documento que detalha como o software será construído, e não apenas o que ele faz.</li>
+            <li><strong>Métricas de Sucesso:</strong> Define-se o que significa "vencer" antes de escrever a primeira linha de código.</li>
+            <li><strong>Restrições:</strong> Identifica-se cedo o que não dá para fazer (tempo, orçamento ou tecnologia).</li>
+          </ul>
+        `
+      },
+      { 
+        n: "02", t: "Arquitetura", 
+        d: "Decisões grandes primeiro: stack, dados, integrações. Documentadas como ADRs versionadas.",
+        details: `
+          <p><strong>É a fase de tomar decisões difíceis</strong> que seriam caras de mudar depois. O diferencial aqui é o uso de ADRs (Architecture Decision Records).</p>
+          <ul class="process-details-list">
+            <li><strong>ADRs:</strong> São registros que explicam o contexto e o porquê de uma decisão. Isso evita que novos desenvolvedores questionem escolhas passadas sem entender o contexto.</li>
+            <li><strong>Visão Macro:</strong> Define-se como os dados fluem, como os sistemas conversam e qual stack sustenta o crescimento esperado.</li>
+          </ul>
+        `
+      },
+      { 
+        n: "03", t: "Construção", 
+        d: "Sprints de duas semanas, demo ao final de cada uma. Código revisado, testado e instrumentado desde o dia um.",
+        details: `
+          <p><strong>Aqui entra o ritmo de entrega.</strong> O processo segue a metodologia Ágil, mas com um rigor técnico elevado desde o início.</p>
+          <ul class="process-details-list">
+            <li><strong>Sprints de 2 semanas:</strong> Ciclos curtos para garantir que o projeto não saia dos trilhos.</li>
+            <li><strong>Demos Semanais:</strong> Transparência total. O cliente vê o software funcionando, não apenas um relatório de progresso.</li>
+            <li><strong>Qualidade Nativa:</strong> Testes automatizados e revisão de código fazem parte da definição de "pronto".</li>
+          </ul>
+        `
+      },
+      { 
+        n: "04", t: "Lançamento", 
+        d: "Deploy gradual, observabilidade ligada e plano de rollback ensaiado. Sem heróis — só processo.",
+        details: `
+          <p><strong>O objetivo é um lançamento sem drama.</strong> A mentalidade de "sem heróis" significa que o processo é tão seguro que ninguém precisa virar a noite.</p>
+          <ul class="process-details-list">
+            <li><strong>Deploy Gradual:</strong> O software é liberado aos poucos (Canary ou Blue-Green) para mitigar riscos.</li>
+            <li><strong>Observabilidade:</strong> Monitoramento em tempo real para detectar erros antes que o usuário perceba.</li>
+            <li><strong>Plano de Rollback:</strong> Se algo der errado, existe um botão de "voltar" testado e pronto.</li>
+          </ul>
+        `
+      },
+      { 
+        n: "05", t: "Operação", 
+        d: "SLA, on-call e melhoria contínua. Ficamos quando faz sentido; saímos quando o time interno está pronto.",
+        details: `
+          <p><strong>A fase final foca na sustentabilidade e autonomia.</strong> O software precisa ser operável a longo prazo.</p>
+          <ul class="process-details-list">
+            <li><strong>SLA e On-call:</strong> Definição clara de níveis de serviço e quem responde em caso de incidentes.</li>
+            <li><strong>Transferência de Conhecimento:</strong> O sucesso dessa etapa é quando o time interno domina a solução e o parceiro pode sair com segurança.</li>
+          </ul>
+        `
+      },
+    ];
+
+    document.getElementById('process-list').innerHTML = PROCESS.map((p, i) => `
+      <div class="process-row" onclick="this.classList.toggle('active')">
+        <div class="process-header">
+          <span class="pn">— ${p.n}</span>
+          <span class="pt">${p.t}</span>
+          <span class="pd">${p.d}</span>
+          <span class="pa"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+        </div>
+        <div class="process-content">
+          <div class="process-inner">
+            ${p.details}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Cases Data
+    const CASES = [
+      { client: "Health", year: "2025", sector: "Saúde Digital", title: "Template moderno para clínicas, hospitais e profissionais da saúde.", desc: "Interface institucional com visual limpo, navegação objetiva e foco em transmitir confiança e autoridade para serviços médicos.", stats: [{ v: "+50", l: "Páginas prontas" }, { v: "100%", l: "Responsivo" }, { v: "UX", l: "Focada em conversão" }], img: "images/case-health.png" },
+      { client: "Financial", year: "2025", sector: "Finanças", title: "Landing page para solução financeira moderna e acessível.", desc: "Plataforma visual para apresentação de serviços de pagamento e controle financeiro, com design leve e voltado para experiência do usuário.", stats: [{ v: "24h", l: "Acesso digital" }, { v: "+10k", l: "Transações" }, { v: "Seguro", l: "Fluxo protegido" }], img: "images/case-financial.png" },
+      { client: "Education", year: "2025", sector: "Educação", title: "Dashboard completo para gestão educacional e indicadores.", desc: "Painel administrativo com visão de alunos, cursos, receitas e métricas em tempo real, ideal para centralizar informações de forma eficiente.", stats: [{ v: "3k+", l: "Alunos" }, { v: "28+", l: "Cursos ativos" }, { v: "Real-time", l: "Indicadores" }], img: "images/case-edu.png" },
+      { client: "Shopping", year: "2025", sector: "E-commerce", title: "Template comercial para loja virtual com foco em vendas.", desc: "Layout completo para marketplace e varejo online, com vitrine promocional e estrutura pensada para destacar produtos e aumentar conversões.", stats: [{ v: "+100", l: "Produtos" }, { v: "Multi", l: "Categorias" }, { v: "Alta", l: "Conversão" }], img: "images/case-shop.png" }
+    ];
+    document.getElementById('cases-grid').innerHTML = CASES.map(c => `
+      <article class="case">
+        <div class="case-img" style="background-image: url('${c.img}')"><span class="label">[ screenshot · ${c.client.toLowerCase().replace(/\\s+/g, '-')} ]</span></div>
+        <div class="case-meta"><span>${c.client}</span><span class="dot"></span><span>${c.sector}</span><span class="dot"></span><span>${c.year}</span></div>
+        <h3 class="title">${c.title}</h3>
+        <p>${c.desc}</p>
+        <div class="case-stats">${c.stats.map(s => `<div><div class="v">${s.v}</div><div class="l">${s.l}</div></div>`).join('')}</div>
+      </article>
+    `).join('');
+
+    // Testimonials Data
+    const TESTS = [
+      { q: "A Stardev entregou em três meses o que dois fornecedores anteriores não entregaram em um ano. Diferença está no rigor técnico.", who: "Marina Cordeiro", role: "CTO · Banco Norte", a: "M" },
+      { q: "Não são só engenheiros. Provocam decisões de produto que a gente preferia adiar — e a gente sai melhor por isso.", who: "Rafael Saito", role: "Founder · Verde Saúde", a: "R" },
+      { q: "O time saiu, a operação ficou nossa, e o código está vivo dois anos depois. Esse é o teste real de uma boa software house.", who: "Juliana Petrov", role: "VP Eng · Logos Educação", a: "J" }
+    ];
+    document.getElementById('tests-grid').innerHTML = TESTS.map(t => `
+      <div class="test">
+        <p class="quote italic">"${t.q}"</p>
+        <div class="test-author">
+          <div class="avatar">${t.a}</div>
+          <div>
+            <div class="who">${t.who}</div>
+            <div class="role">${t.role}</div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Contact Form
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('contact-btn');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = "Recebido — em 24h respondemos";
+      setTimeout(() => btn.innerHTML = originalHtml, 4000);
+    });
+
+
+    // Form Submission to n8n
+    const contactForm = document.getElementById('contact-form');
+    const contactBtn = document.getElementById('contact-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const originalBtnText = contactBtn.innerHTML;
+        contactBtn.innerHTML = 'Enviando...';
+        contactBtn.disabled = true;
+
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch('https://n8nwebhook.starchats.com.br/webhook/d7fd4fbf-a39e-4972-b80a-5c859a455bab', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              ...data,
+              source: 'stardev_landing_page',
+              timestamp: new Date().toISOString()
+            }),
+          });
+
+          if (response.ok) {
+            contactBtn.innerHTML = 'Enviado com sucesso!';
+            contactBtn.style.background = 'var(--good)';
+            contactBtn.style.color = '#fff';
+            contactForm.reset();
+            
+            setTimeout(() => {
+              contactBtn.innerHTML = originalBtnText;
+              contactBtn.style.background = '';
+              contactBtn.style.color = '';
+              contactBtn.disabled = false;
+            }, 5000);
+          } else {
+            throw new Error('Falha no envio');
+          }
+        } catch (error) {
+          console.error('Erro:', error);
+          contactBtn.innerHTML = 'Erro ao enviar. Tente novamente.';
+          contactBtn.style.background = 'var(--warn)';
+          
+          setTimeout(() => {
+            contactBtn.innerHTML = originalBtnText;
+            contactBtn.style.background = '';
+            contactBtn.disabled = false;
+          }, 3000);
+        }
+      });
+    }
+    // Footer Typing Effect
+    const footerMark = document.getElementById('footer-mark');
+    if (footerMark) {
+      const textToType = footerMark.innerText;
+      footerMark.innerText = ''; // Clear initially
+      let typeIdx = 0;
+      let hasTyped = false;
+
+      const typeFooter = () => {
+        if (typeIdx < textToType.length) {
+          footerMark.innerText += textToType.charAt(typeIdx);
+          typeIdx++;
+          setTimeout(typeFooter, 120); // Typing speed
+        }
+      };
+
+      const footerObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasTyped) {
+          hasTyped = true;
+          setTimeout(typeFooter, 200); // Small delay before starting
+          footerObserver.disconnect();
+        }
+      }, { threshold: 0.1 });
+
+      footerObserver.observe(footerMark);
+    }
+  </script>
+</body>
+</html>
