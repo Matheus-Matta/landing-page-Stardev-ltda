@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU-ID-AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-SEU-ID-AQUI', { 'debug_mode': true });
+  </script>
+
   <title>Stardev — Engenharia com gosto.</title>
   <meta name="description" content="Stardev é uma software house de elite e incubadora de SaaS no Rio de Janeiro. Criamos aplicações Full-Stack, Mobile e E-commerce Headless focadas em performance e arquitetura sólida." />
   <meta name="keywords" content="software house, desenvolvimento full-stack, aplicativos mobile, react native, next.js, e-commerce headless, cloud computing, devops, rio de janeiro, desenvolvimento de software" />
@@ -25,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="stylesheet" href="tailwind.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -35,13 +47,7 @@
   <header class="nav">
     <div class="container nav-row">
       <a href="#" class="brand" data-comment-anchor="brand">
-        <span class="brand-mark">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 2 L13.6 9.2 L20.8 7.2 L15.4 12.4 L20.8 17.6 L13.6 15.6 L12 22.8 L10.4 15.6 L3.2 17.6 L8.6 12.4 L3.2 7.2 L10.4 9.2 Z" fill="currentColor" opacity="0.9"/>
-            <circle cx="12" cy="12" r="2.2" fill="#0a0a0c"/>
-          </svg>
-        </span>
-        <span class="brand-name">Stardev<em>.</em></span>
+        <img src="images/icon-logo.svg" alt="Stardev" class="brand-logo" />
       </a>
       <nav class="nav-links">
         <a href="#services">Serviços</a>
@@ -525,13 +531,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#" class="brand">
-            <span class="brand-mark">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 2 L13.6 9.2 L20.8 7.2 L15.4 12.4 L20.8 17.6 L13.6 15.6 L12 22.8 L10.4 15.6 L3.2 17.6 L8.6 12.4 L3.2 7.2 L10.4 9.2 Z" fill="currentColor" opacity="0.9"/>
-                <circle cx="12" cy="12" r="2.2" fill="#0a0a0c"/>
-              </svg>
-            </span>
-            <span class="brand-name">Stardev<em>.</em></span>
+            <img src="images/icon-logo.svg" alt="Stardev" class="brand-logo" />
           </a>
           <h3>Engenharia<br/><span class="italic">com gosto.</span></h3>
           <p>Software house e incubadora de SaaS, baseada em Rio de Janeiro. Atendendo times técnicos no Brasil, EUA e Portugal desde 2019.</p>
@@ -934,6 +934,24 @@
 
       footerObserver.observe(footerMark);
     }
+
+    // Rastreamento de Cliques Manual (Google Analytics)
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('.btn, .nav-links a, .footer-col a');
+      if (target && window.gtag) {
+        const label = target.innerText.trim() || target.getAttribute('aria-label');
+        const destination = target.getAttribute('href');
+
+        gtag('event', 'select_content', {
+          content_type: 'button_click',
+          item_id: label,
+          destination: destination
+        });
+      }
+    });
   </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "SEU_TOKEN_CLOUDFLARE"}'></script>
 </body>
 </html>
